@@ -7,12 +7,14 @@ class stu
 		char name[20];
 		int standard;
 		int sub[4];
+		int sum=0;
+		float avg;
 	public:
 		void get_details()
 		{
 			cout<<"Enter id, name and standard of a student:"<<endl;
 			cin>>id>>name>>standard;
-			cout<<id<<name<<standard;
+			cout<<"SO the given details are as follows:"<<ends<<id<<ends<<name<<ends<<standard;
 		}	
                 void get_marks()
 		{
@@ -26,10 +28,25 @@ class stu
 			{
 				cout<<sub[i];
 			}	
+		}
+		void get_result()
+		{
+			cout<<"So the total maarks of student are as follows:"<<endl;
+			for(i=0;i<4;i++)
+			{
+				sum+=sub[i];
+			}	
+			cout<<"So the total maarks of student are as follows:"<<sum<<endl;
+			avg=sum/4;
+			cout<<"So the average marks of student are:"<<ends<<avg<<endl;
+		}	
+
 };		
 int main()
 {
 	stu s1;
 	s1.get_details();
+	s1.get_marks();
+	s1.get_result();
 	return 0;
 }	
