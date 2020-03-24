@@ -32,15 +32,25 @@ class stu
 		void get_result()
 		{
 			cout<<"So the total maarks of student are as follows:"<<endl;
-			for(i=0;i<4;i++)
+			for(int i=0;i<4;i++)
 			{
 				sum+=sub[i];
 			}	
 			cout<<"So the total maarks of student are as follows:"<<sum<<endl;
 			avg=sum/4;
 			cout<<"So the average marks of student are:"<<ends<<avg<<endl;
+			for(int i=0;i<4;i++)
+			{
+				if(sub[i]<35)
+				{
+					cout<<"Failed"<<endl;
+				}
+				else
+				{
+					cout<<"Passed"<<endl;
+				}
+			}
 		}	
-
 };		
 int main()
 {
